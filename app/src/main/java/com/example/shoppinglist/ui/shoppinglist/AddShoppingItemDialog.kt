@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDialog
+import com.example.shoppinglist.R
 import com.example.shoppinglist.data.db.entites.ShoppingItem
 import kotlinx.android.synthetic.main.dialog_shopping_items.*
 
@@ -11,6 +12,8 @@ class AddShoppingItemDialog(context: Context, var addDialogListener: AddDialogLi
     AppCompatDialog(context) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.dialog_shopping_items)
+
         tvAdd.setOnClickListener {
             val name = etName.text.toString()
             val amount = etAmount.text.toString()
