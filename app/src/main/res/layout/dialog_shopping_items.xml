@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/etName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/etAmount"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
