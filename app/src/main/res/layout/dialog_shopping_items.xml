@@ -27,7 +27,7 @@
         android:text="CANCEL"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/tvAdd"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
 
     <TextView
         android:id="@+id/tvAdd"
@@ -37,7 +37,7 @@
         android:text="ADD"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/etAmount" />
 
     <EditText
         android:id="@+id/etName"
@@ -47,7 +47,7 @@
         android:ems="10"
         android:inputType="text"
         android:hint="Name"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName4"
+        app:layout_constraintEnd_toStartOf="@+id/etAmount"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
