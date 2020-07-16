@@ -44,7 +44,3 @@ class ShoppingItemsAdapter(
         }
     }
 }
-
-private fun LayoutInflater.inflate(shoppingItem: Any): Any {
-
-}
