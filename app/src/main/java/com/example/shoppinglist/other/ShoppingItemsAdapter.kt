@@ -32,6 +32,16 @@ class ShoppingItemsAdapter(
         holder.itemView.tvAmount.text = "${curShoppingItem.amount}"
 
         holder.itemView.iv_delete.setOnClickListener { viewModel.delete(curShoppingItem) }
+        holder.itemView.iv_plus.setOnClickListener {
+            curShoppingItem.amount++
+            viewModel.upsert(curShoppingItem)
+        }
+        holder.itemView.iv_minus.setOnClickListener {
+            if (curShoppingItem.amount > 0) {
+                curShoppingItem.amount--
+                viewModel.upsert(curShoppingItem)
+            }
+        }
     }
 }
 
