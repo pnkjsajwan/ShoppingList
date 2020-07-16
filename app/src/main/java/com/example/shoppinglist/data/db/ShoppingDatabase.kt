@@ -1,10 +1,10 @@
-package com.example.shoppinglist
+package com.example.shoppinglist.data.db
 
 import android.content.Context
 import androidx.room.Database
-import androidx.room.Query
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.shoppinglist.data.db.entites.ShoppingItem
 
 @Database(
     entities = [ShoppingItem::class],
@@ -17,8 +17,13 @@ abstract class ShoppingDatabase : RoomDatabase() {
         @Volatile
         private var instance: ShoppingDatabase? = null
         private val LOCK = Any()
-        operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
-            instance ?: createDatabase(context).also { instance = it }
+        operator fun invoke(context: Context) = instance
+            ?: synchronized(LOCK) {
+            instance
+                ?: createDatabase(
+                    context
+                )
+                    .also { instance = it }
         }
 
         private fun createDatabase(context: Context) = Room.databaseBuilder(
